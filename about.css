@@ -1,0 +1,374 @@
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    background: transparent; /* Make the header background transparent */
+    color: #fff; /* Keep the text color white for contrast */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for readability */
+    position: absolute; /* Positioning it over the #welcome section */
+    width: 100%; /* Make sure it spans the entire width */
+    top: 0; /* Keep it at the top */
+    left: 0; /* Align it to the left */
+}
+
+header h1 {
+    padding: 0;
+    margin: 0;
+}
+
+header .h6 {
+    text-align: right;
+    margin: 0;
+}
+
+nav ul {
+    margin-left: auto; /* Push nav to the right */
+    margin-right: 1em;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+    position: relative; /* Required for the after pseudo-element */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #33fff9;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+nav ul li a:hover {
+    color: #33fff9; /* Change color on hover */
+}
+
+nav ul li a.active {
+    font-weight: bold; /* make the active link bold */
+    color: #0754ef; /* change the color for active link */
+}
+
+section {
+    padding: 20px;
+    /* margin: 10px; */
+}
+
+.content{
+    background-image: url('pro_main.jpg');
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the image */
+}
+
+/* About Section Styling */
+#about {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10em;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:20em;
+
+}
+
+.profile {
+    flex-basis: 30%;
+    text-align: center;
+}
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10%;
+    /* border: 5px solid #4CAF50; */
+    object-fit: cover;
+}
+
+.bio {
+    flex-basis: 65%;
+    padding: 20px;
+}
+
+.bio h2 {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.bio p {
+    font-size: 1.1rem;
+    color: black;
+    line-height: 1.8;
+}
+
+#edu-sec {
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+#edu-sec h2 {
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.education-item {
+    background: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-left: 5px solid #2badf8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.education-item h3 {
+    margin: 0;
+    color: #2badf8;
+}
+
+.education-item p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.container_ {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skills-section {
+    margin-bottom: 30px;
+}
+
+.skills-section h1 {
+    font-size: 2rem;
+    color: black;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.skills-section h2 {
+    font-size: 1.8rem;
+    color: #333;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.skills-section ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.skills-section ul li {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.skills-section ul li::before {
+    content: "✔";
+    color: #4CAF50;
+    margin-right: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: black;
+    color: #fff;
+    padding-bottom: 1.5em;
+}
+
+/* Style the main list */
+#social-media-links {
+    display: flex;              /* Arrange the list items horizontally */
+    justify-content: center;    /* Center the items horizontally */
+    list-style: none;           /* Remove default list styling */
+    padding: 0;                 /* Remove padding */
+    margin: 0;                  /* Remove margin */
+}
+
+/* Style each individual list item */
+#social-media-links li {
+    margin: 0 15px;             /* Space out the icons */
+}
+
+/* Style the links inside the list items */
+#social-media-links li a {
+    display: block;
+    width: 40px;                /* Set a fixed width for each icon */
+    height: 40px;               /* Set a fixed height for each icon */
+    text-align: center;         /* Center the icons */
+}
+
+/* Style the images (icons) */
+#social-media-links li img {
+    width: 100%;                /* Make the image fill the link container */
+    height: 100%;               /* Maintain aspect ratio of icons */
+    transition: transform 0.3s; /* Smooth transform effect for hover */
+}
+
+/* Add hover effect to enlarge the icons */
+#social-media-links li a:hover img {
+    transform: scale(1.1);      /* Slightly enlarge the icon */
+}
+
+/* Specific styles for each social media platform (optional) */
+#twitter img {
+    filter: brightness(0) saturate(100%) invert(32%) sepia(72%) saturate(4135%) hue-rotate(190deg) brightness(92%) contrast(99%);
+}
+
+#instagram img {
+    filter: brightness(0) saturate(100%) invert(45%) sepia(72%) saturate(1402%) hue-rotate(212deg) brightness(93%) contrast(99%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .profile {
+        flex-basis: 80%; /* Take more space on small screens */
+        margin-bottom: 20px; /* Add space between the image and text */
+    }
+
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .bio {
+        flex-basis: 80%;
+    }
+
+    .bio h2 {
+        font-size: 1.6rem;
+    }
+
+    .bio p {
+        font-size: 1rem;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0; /* Ensure the header is at the top */
+        left: 0;
+        width: 100%;
+        z-index: 10; /* Ensure the header is on top of other content */
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    /* Position the menu toggle button in the top-right corner */
+    #menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2em;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        right: 20px; /* Adjust distance from the right edge */
+        top: 10px;  /* Adjust distance from the top edge */
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column; /* Stack elements vertically */
+        justify-content: center; /* Center vertically */
+        align-items: center; /* Center horizontally */
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 100%; /* Position below the header */
+        right: 0; /* Align to the right side */
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        transition: top 0.3s ease-in-out; /* Smooth transition when appearing */
+    }
+
+    nav ul.show {
+        display: flex; /* Show menu when toggled */
+        top: 100%; /* Ensure it stays below the header */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Add spacing between menu items */
+    }
+}
+
+/* Hide the hamburger menu in desktop view */
+@media (min-width: 769px) {
+    #menu-toggle {
+        display: none; /* Hide the hamburger menu button */
+    }
+}
+
+@media (max-width: 340px) {
+    /* Stack the social media icons vertically */
+    #social-media-links {
+        flex-direction: column;  /* Stack the icons vertically */
+        align-items: center;     /* Center them horizontally */
+    }
+
+    #social-media-links li {
+        margin: 10px 0;          /* Vertical spacing between icons */
+    }
+
+    #social-media-links li a {
+        width: 50px;             /* Slightly bigger icons for clarity */
+        height: 50px;
+    }
+}
