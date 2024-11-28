@@ -1,8 +1,11 @@
 body {
-    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
     overflow-x: hidden;
 }
 
@@ -72,7 +75,6 @@ nav ul li a:hover {
 
 nav ul li a.active {
     font-weight: bold; /* make the active link bold */
-    /*text-decoration: underline;  underline the active link */
     color: #0754ef; /* change the color for active link */
 }
 
@@ -81,47 +83,137 @@ section {
     /* margin: 10px; */
 }
 
-#projects{
-    font-size: larger;
+.content{
     background-image: url('pro_main.jpg');
     background-size: cover; /* Ensures the image covers the entire div */
     background-position: center; /* Centers the image */
-    color: white; /* Change text color for better contrast */
-    padding: 50px; /* Add some padding */
-
-    display: flex; /* Enable Flexbox */
-    flex-direction: column; /* Align elements vertically */
-    justify-content: flex-end; /* Align content to the bottom */
-    align-items: flex-start; /* Align content to the left */
 }
 
-#projects h2 {
-    margin-top: 3em;
+/* About Section Styling */
+#about {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10em;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-
-form {
+.container {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height:20em;
+
 }
 
-label {
-    margin: 10px 0 5px;
+.profile {
+    flex-basis: 30%;
+    text-align: center;
 }
 
-input, textarea {
-    padding: 10px;
-    margin-bottom: 10px;
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10%;
+    /* border: 5px solid #4CAF50; */
+    object-fit: cover;
+}
+
+.bio {
+    flex-basis: 65%;
+    padding: 20px;
+}
+
+.bio h2 {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.bio p {
+    font-size: 1.1rem;
+    color: black;
+    line-height: 1.8;
+}
+
+#edu-sec {
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+#edu-sec h2 {
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.education-item {
+    background: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-left: 5px solid #2badf8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.education-item h3 {
+    margin: 0;
+    color: #2badf8;
+}
+
+.education-item p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.container_ {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skills-section {
+    margin-bottom: 30px;
+}
+
+.skills-section h1 {
+    font-size: 2rem;
+    color: black;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.skills-section h2 {
+    font-size: 1.8rem;
+    color: #333;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.skills-section ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.skills-section ul li {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.skills-section ul li::before {
+    content: "✔";
+    color: #4CAF50;
+    margin-right: 10px;
 }
 
 footer {
@@ -175,8 +267,36 @@ footer {
     filter: brightness(0) saturate(100%) invert(45%) sepia(72%) saturate(1402%) hue-rotate(212deg) brightness(93%) contrast(99%);
 }
 
-/* Mobile-Friendly Adjustments */
+/* Responsive Design */
 @media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .profile {
+        flex-basis: 80%; /* Take more space on small screens */
+        margin-bottom: 20px; /* Add space between the image and text */
+    }
+
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .bio {
+        flex-basis: 80%;
+    }
+
+    .bio h2 {
+        font-size: 1.6rem;
+    }
+
+    .bio p {
+        font-size: 1rem;
+    }
+
     header {
         display: flex;
         justify-content: space-between;
@@ -227,7 +347,6 @@ footer {
     nav ul li {
         margin: 10px 0; /* Add spacing between menu items */
     }
-
 }
 
 /* Hide the hamburger menu in desktop view */

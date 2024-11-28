@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="portfolio.css">
     <title>Shreyas Meru</title>
+    <link rel="icon" href="images/logo.jpg" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -12,6 +13,7 @@
             <h1>Shreyas Meru</h1>
             <h6 class="h6">AI Engineer, Mobile & Web Developer</h6>
         </div>
+        <button id="menu-toggle" aria-label="Toggle Navigation">☰</button>
         <nav>
             <ul>
                 <li><a class="active" href="portfolio.html">Home</a></li>
@@ -23,12 +25,72 @@
     </header>
 
     <section id="welcome">
-        <h2>Welcome to My Portfolio</h2>
-        <p>Write a brief introduction about yourself here.</p>
+        <p id="wel_til">Shreyas Meru</p>
+        <p style="font-size:1em;">AI Engineer, Mobile & Web Developer</p>
+    </section>
+
+    <section style="background-image: url('images/project_bg.jpg'); background-repeat: no-repeat; background-size: cover;">
+        <section id="my-projects">
+            <div class="project-content">
+                <h2 id="projects-title">My Projects</h2>
+                <p id="project-description">Here are some of the amazing projects I have worked on. Feel free to explore!</p>
+                <a href="#projects" class="explore-btn">Explore my projects ></a>
+            </div>
+        </section>
+    </section>
+
+    <section style="background-image: url('images/about_bg.jpg');">
+        <section id="my-projects">
+            <div class="project-content">
+                <h2 id="projects-title">About Myself</h2>
+                <p id="project-description">I am a passionate developer constantly exploring new technologies and creative solutions!</p>
+                <a href="#about" class="explore-btn">Explore About Myself ></a>
+            </div>
+        </section>
+    </section>
+
+    <section style="background-image: url('images/contact_bg.jpg'); background-repeat: no-repeat; background-size: cover;">
+        <section id="my-projects">
+            <div class="project-content">
+                <h2 id="projects-title">Contact Me</h2>
+                <p id="project-description">Whether you have a query or want to collaborate, don't hesitate to reach out using the contact page!</p>
+                <a href="#contact" class="explore-btn">Contact Me ></a>
+            </div>
+        </section>
     </section>
 
     <footer>
+        <p>Follow me on</p>
+        <ul id="social-media-links">
+            <li id="linkedin">
+                <a href="https://www.linkedin.com/in/shreyasmeru/" target="_blank">
+                    <img src="images/icon-logo-linkedin.png" alt="LinkedIn">
+                </a>
+            </li>
+            <li id="facebook">
+                <a href="https://www.facebook.com/officialshreyasmeru" target="_blank">
+                    <img src="images/icon-logo-facebook.png" alt="Facebook">
+                </a>
+            </li>
+            <li id="youtube">
+                <a href="https://www.youtube.com/channel/UCysf9onnkbaHE9o4Hao9pyg" target="_blank">
+                    <img src="images/icon-logo-youtube.png" alt="YouTube">
+                </a>
+            </li>
+            <li id="instagram">
+                <a href="https://www.instagram.com/shreyasmeru" target="_blank">
+                    <img src="images/icon-logo-instagram.png" alt="Instagram">
+                </a>
+            </li>
+            <li id="twitter">
+                <a href="https://twitter.com/shreyasmeru" target="_blank">
+                    <img src="images/icon-logo-twitter.png" alt="Twitter">
+                </a>
+            </li>
+        </ul>
         <p>&copy; 2024 Shreyas Meru</p>
     </footer>
+
+    <script src="projects.js"></script>
 </body>
 </html>

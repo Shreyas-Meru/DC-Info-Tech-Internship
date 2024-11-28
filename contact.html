@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="contact.css">
     <title>Contact Me</title>
+    <link rel="icon" href="images/logo.jpg" type="image/x-icon">
 </head>
 <body>
     <header>
-        <h1>Your Name</h1>
+        <div class="head_txt">
+            <h1>Shreyas Meru</h1>
+            <h6 class="h6">AI Engineer, Mobile & Web Developer</h6>
+        </div>
+        <button id="menu-toggle" aria-label="Toggle Navigation">☰</button>
         <nav>
             <ul>
                 <li><a href="portfolio.html">Home</a></li>
@@ -19,6 +24,7 @@
         </nav>
     </header>
 
+<section class="main">
     <section id="contact">
         <h2>Contact Me</h2>
         <form>
@@ -34,9 +40,41 @@
             <input type="submit" value="Send">
         </form>
     </section>
+</section>
 
-    <footer>
-        <p>&copy; 2024 Your Name</p>
-    </footer>
+<footer>
+    <p>follow me on</p>
+    <ul id="social-media-links">
+        <li id="linkedin">
+            <a href="https://www.linkedin.com/in/shreyasmeru/" target="_blank">
+                <img src="images/icon-logo-linkedin.png" alt="LinkedIn">
+            </a>
+        </li>
+        <li id="facebook">
+            <a href="https://www.facebook.com/officialshreyasmeru" target="_blank">
+                <img src="images/icon-logo-facebook.png" alt="Facebook">
+            </a>
+        </li>
+        <li id="youtube">
+            <a href="https://www.youtube.com/channel/UCysf9onnkbaHE9o4Hao9pyg" target="_blank">
+                <img src="images/icon-logo-youtube.png" alt="YouTube">
+            </a>
+        </li>
+        <li id="instagram">
+            <a href="https://www.instagram.com/shreyasmeru" target="_blank">
+                <img src="images/icon-logo-instagram.png" alt="Instagram">
+            </a>
+        </li>
+        <li id="twitter">
+            <a href="https://twitter.com/shreyasmeru" target="_blank">
+                <img src="images/icon-logo-twitter.png" alt="Twitter">
+            </a>
+        </li>
+    </ul>
+    <p>&copy; 2024 Shreyas Meru</p>
+</footer>
+
+<script src="contact.js"></script>
+
 </body>
 </html>
