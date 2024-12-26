@@ -1,0 +1,169 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Container for the to-do list app */
+.App {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease-in-out;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #4A90E2;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* Input field and add button styling */
+.todo-input {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+input {
+  padding: 12px;
+  width: 80%;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #4A90E2;
+}
+
+button {
+  padding: 12px 16px;
+  font-size: 16px;
+  border: none;
+  background-color: #4A90E2;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #357ABD;
+}
+
+button:active {
+  background-color: #2A5A8E;
+}
+
+/* To-Do List items styling */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fafafa;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: fallDown 0.5s ease-out forwards;
+}
+
+.todo-item button {
+  background-color: #D9534F;
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.todo-item button:hover {
+  background-color: #C9302C;
+}
+
+.todo-item button:active {
+  background-color: #A94442;
+}
+
+/* Fall down animation */
+@keyframes fallDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .App {
+    padding: 20px;
+  }
+
+  input {
+    width: 70%;
+  }
+
+  button {
+    width: 25%;
+  }
+}
+
+/* Celebration effect animation */
+@keyframes celebrate {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5) rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.celebrate-animation {
+  animation: celebrate 0.5s ease-in-out forwards;
+}
+
+.error-message {
+  color: red;
+  font-size: 16px;
+  margin: 10px 0;
+}
+

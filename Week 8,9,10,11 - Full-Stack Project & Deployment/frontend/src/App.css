@@ -1,0 +1,259 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  color: #444;
+}
+
+/* Button to toggle the form visibility */
+.create-blog-container {
+  text-align: center;
+  margin: 20px;
+}
+
+.toggle-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 200px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.toggle-button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.toggle-button:active {
+  transform: translateY(0);
+}
+
+/* Toast Notification Styling */
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 1000;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.toast.error {
+  background-color: #f44336;
+}
+
+.toast.success {
+  background-color: #4CAF50;
+}
+
+/* Blog Form Styling - Initially minimized */
+form {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 30px;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+  color: #333;
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #444;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+form button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+form button:active {
+  transform: translateY(0);
+}
+
+/* Blogs list styling */
+div h2 {
+  text-align: center;
+  margin-top: 40px;
+  color: #444;
+}
+
+/* div > div {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} */
+
+div > div h3 {
+  color: #222;
+}
+
+div > div p {
+  margin: 5px 0;
+}
+
+div > div button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+div > div button:hover {
+  background-color: #d32f2f;
+}
+
+.blog-post {
+  width: 60%;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.blog-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.blog-title {
+  font-size: 24px;
+  color: #2d2d2d;
+  font-weight: bold;
+  margin: 0;
+}
+
+.blog-author {
+  font-size: 14px;
+  color: #757575;
+  display: flex;
+  align-items: center;
+}
+
+.blog-date {
+  font-size: 12px;
+  color: #b0b0b0;
+  margin-left: 10px;
+  white-space: nowrap;
+}
+
+.blog-content {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.blog-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.delete-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #e43e3e;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  form {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  form h2 {
+    font-size: 1.5em;
+  }
+
+  form input,
+  form textarea {
+    padding: 10px;
+  }
+
+  form button {
+    padding: 10px;
+  }
+}
